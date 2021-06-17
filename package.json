@@ -1,13 +1,12 @@
 {
+  "homepage": "http://Lilpiggie0522.github.io/facerecognition",
   "name": "facerecognition",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Lilpiggie0522.github.io/facerecognition",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "gh-pages": "^3.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-particles-js": "^3.4.1",
@@ -41,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.1"
   }
 }
