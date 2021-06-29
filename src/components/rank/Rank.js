@@ -1,12 +1,12 @@
 import React from 'react';
-const Rank = () =>{
+const Rank = ( {userName,userEntry}) => {
     return(
         <div>
            <div className='white f3 center'>
-                {'肥猪，你现在的排名是：'}
+            {`${userName}, your current entry count is: `}
            </div>
            <div className='white f1'>
-                {'第5名'}
+                {`${userEntry}`}
            </div>
         </div>
     );
