@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Lilpiggie0522/facerecognition/static/css/main.dc74a0bf.chunk.css",
+    "main.js": "/Lilpiggie0522/facerecognition/static/js/main.78042b15.chunk.js",
+    "main.js.map": "/Lilpiggie0522/facerecognition/static/js/main.78042b15.chunk.js.map",
+    "runtime-main.js": "/Lilpiggie0522/facerecognition/static/js/runtime-main.76030e52.js",
+    "runtime-main.js.map": "/Lilpiggie0522/facerecognition/static/js/runtime-main.76030e52.js.map",
+    "static/css/2.c1f4f5f4.chunk.css": "/Lilpiggie0522/facerecognition/static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.6158a248.chunk.js": "/Lilpiggie0522/facerecognition/static/js/2.6158a248.chunk.js",
+    "static/js/2.6158a248.chunk.js.map": "/Lilpiggie0522/facerecognition/static/js/2.6158a248.chunk.js.map",
+    "static/js/3.a3e77a74.chunk.js": "/Lilpiggie0522/facerecognition/static/js/3.a3e77a74.chunk.js",
+    "static/js/3.a3e77a74.chunk.js.map": "/Lilpiggie0522/facerecognition/static/js/3.a3e77a74.chunk.js.map",
+    "index.html": "/Lilpiggie0522/facerecognition/index.html",
+    "static/css/2.c1f4f5f4.chunk.css.map": "/Lilpiggie0522/facerecognition/static/css/2.c1f4f5f4.chunk.css.map",
+    "static/css/main.dc74a0bf.chunk.css.map": "/Lilpiggie0522/facerecognition/static/css/main.dc74a0bf.chunk.css.map",
+    "static/js/2.6158a248.chunk.js.LICENSE.txt": "/Lilpiggie0522/facerecognition/static/js/2.6158a248.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76030e52.js",
+    "static/css/2.c1f4f5f4.chunk.css",
+    "static/js/2.6158a248.chunk.js",
+    "static/css/main.dc74a0bf.chunk.css",
+    "static/js/main.78042b15.chunk.js"
+  ]
+}
