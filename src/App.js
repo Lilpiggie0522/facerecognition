@@ -8,16 +8,8 @@ import Particles from 'react-particles-js';
 import './App.css';
 import FaceRecognition from './components/faceRecognition/FaceRecognition';
 import Register from './components/register/Register';
-import Clarifai from "clarifai";
 
 // const Clarifai = require('clarifai');
-
-const app = new Clarifai.App({
- apiKey: 'f95f77189da948d088f8aa3a93132cef'
-});
-
-
-
 
 const particlesOptions = {
   "particles": {
@@ -130,24 +122,24 @@ const particlesOptions = {
   "retina_detect": true
 }
 
-
+const initialState = {
+  input: '',
+  imageUrl: '',
+  box: {},
+  route: 'signin',
+  isSignedIn: false,
+  user:{
+    id:'',
+    name:'',
+    email:'',
+    entries:0,
+    joined:''
+  }
+}
 class App extends Component {
   constructor(){
     super();
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user:{
-        id:'',
-        name:'',
-        email:'',
-        entries:0,
-        joined:''
-      }
-    }
+    this.state= initialState;
   }
 
   // componentDidMount(){
@@ -192,8 +184,16 @@ displayFacebox = (box) =>{
     console.log('click');
     this.setState({imageUrl:this.state.input});
     console.log(this.state.input)
-    app.models
-    .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+    fetch('http://localhost:3000/imageurl',{
+      method:'post',
+      headers:{'Content-type':'application/json'},
+      body: JSON.stringify({
+        input: this.state.input
+      })
+    })
+    .then(response => 
+      response.json()
+    )
     .then((response)=>{
       //  console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
       if(response){
@@ -207,7 +207,7 @@ displayFacebox = (box) =>{
         .then(response => response.json())
         .then(count => {
           this.setState(Object.assign(this.state.user,{entries:count}))
-        })
+        }).catch(err=>console.log)
       }
        this.displayFacebox(this.calculateFaceLocation(response));
       })
@@ -218,7 +218,7 @@ displayFacebox = (box) =>{
   onRouteChange = (route) => {
     this.setState({route:route})
     if(route==='signout'){
-      this.setState({isSignedIn:false})
+      this.setState(initialState)
     }
     else if(route==='home'){
       this.setState({isSignedIn:true})
