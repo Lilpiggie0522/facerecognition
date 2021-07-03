@@ -184,7 +184,7 @@ displayFacebox = (box) =>{
     console.log('click');
     this.setState({imageUrl:this.state.input});
     console.log(this.state.input)
-    fetch('http://localhost:3000/imageurl',{
+    fetch('https://fathomless-mountain-32326.herokuapp.com/imageurl',{
       method:'post',
       headers:{'Content-type':'application/json'},
       body: JSON.stringify({
@@ -197,7 +197,7 @@ displayFacebox = (box) =>{
     .then((response)=>{
       //  console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
       if(response){
-        fetch('http://localhost:3000/image',{
+        fetch('https://fathomless-mountain-32326.herokuapp.com:3000/image',{
           method:'put',
           headers:{'Content-type':'application/json'},
           body: JSON.stringify({
