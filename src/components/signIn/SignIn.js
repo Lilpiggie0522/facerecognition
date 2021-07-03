@@ -20,7 +20,7 @@ class SignIn extends React.Component{
 
   onSubmitSignIn = () =>{
     // console.log(this.state);
-    fetch('https://fathomless-mountain-32326.herokuapp.com//signin',{
+    fetch('https://fathomless-mountain-32326.herokuapp.com/signin',{
       method:'post',
       headers:{'Content-type':'application/json'},
       body: JSON.stringify({
